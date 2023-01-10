@@ -1,6 +1,6 @@
 ---
 title: "UN Votes"
-author: "YOU"
+author: "Colin Li"
 date: "`r Sys.Date()`"
 output: 
   html_document: 
@@ -49,7 +49,7 @@ the [Appendix](#appendix) for a list of the countries in the data.
 
 ```{r plot-yearly-yes-issue, fig.width=10, fig.height=6, message=FALSE}
 unvotes %>%
-  filter(country %in% c("UK & NI", "US", "Turkey")) %>%
+  filter(country %in% c("Spain", "Singapore", "South Africa")) %>%
   mutate(year = year(date)) %>%
   group_by(country, year, issue) %>%
   summarize(percent_yes = mean(vote == "yes")) %>%
